@@ -11,6 +11,7 @@ const Review = mongoose.model('Review', {
 });
 const bodyParser = require('body-parser');
 const app = express()
+const reviews = require('./controllers/reviews')(app);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('_method'))
